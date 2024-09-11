@@ -8,7 +8,9 @@ export default function RootLayout({
   return (
     <main className="h-screen overflow-y-scroll bg-gradient-to-b from-slate-800 to-slate-700">
       <Header />
-      {children}
+      <section>
+        {children}
+      </section>
     </main>
   );
 }

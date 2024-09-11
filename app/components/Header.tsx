@@ -40,7 +40,7 @@ const Header = () => {
             <Breadcrumb>
                 <BreadcrumbList>
                     <BreadcrumbItem>
-                        <BreadcrumbPage className="text-white">About</BreadcrumbPage>
+                        <BreadcrumbPage className="text-white font-semibold">About</BreadcrumbPage>
                     </BreadcrumbItem>
                     <Slash />
                     <BreadcrumbItem>
