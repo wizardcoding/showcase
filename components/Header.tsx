@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Slash } from "lucide-react";
 import {
@@ -7,8 +8,10 @@ import {
     BreadcrumbList,
     BreadcrumbPage,
 } from "@/components/ui/breadcrumb"
+import { usePathname } from 'next/navigation'
   
 const Header = () => {
+    const pathName = usePathname();
   return (
     <header className="py-2">
         <div className="
@@ -40,15 +43,18 @@ const Header = () => {
             <Breadcrumb>
                 <BreadcrumbList>
                     <BreadcrumbItem>
-                        <BreadcrumbPage className="text-white font-semibold">About</BreadcrumbPage>
+                        {pathName === '/' ? <BreadcrumbPage className="text-white font-semibold">About</BreadcrumbPage>
+                            : <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/">About</BreadcrumbLink>}
                     </BreadcrumbItem>
                     <Slash />
                     <BreadcrumbItem>
-                        <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/">Skills</BreadcrumbLink>
+                        {pathName === '/skills' ? <BreadcrumbPage className="text-white font-semibold">Skills</BreadcrumbPage>
+                            : <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/skills">Skills</BreadcrumbLink>}
                     </BreadcrumbItem>
                     <Slash />
                     <BreadcrumbItem>
-                        <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/">Contact</BreadcrumbLink>
+                        {pathName === '/contact' ? <BreadcrumbPage className="text-white font-semibold">Contact</BreadcrumbPage>
+                            : <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/contact">Contact</BreadcrumbLink>}
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
