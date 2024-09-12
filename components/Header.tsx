@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Slash } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Slash } from "lucide-react";
 import {
     Breadcrumb,
     BreadcrumbItem,
