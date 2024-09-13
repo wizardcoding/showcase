@@ -60,28 +60,32 @@ const Header = () => {
             </Breadcrumb>
             </section>
             <section className="flex space-x-3 items-center">
-                <Button className="
-                    cursor-pointer
-                    hidden 
-                    md:inline-block 
-                    text-white 
-                    bg-blue-500 
-                    px-4 
-                    py-2 
-                    rounded-full 
-                    hover:bg-blue-600">
-                    Linkedin
-                </Button>
-                <Button className="
-                    border 
-                    cursor-pointer 
-                    border-gray-500 
-                    px-4 
-                    py-2 
-                    text-white 
-                    rounded-full">
-                    Github
-                </Button>
+                <a target="_blank" href="https://www.linkedin.com/in/francisco-huizar-9a6420aa/">
+                    <Button className="
+                        cursor-pointer
+                        hidden 
+                        md:inline-block 
+                        text-white 
+                        bg-blue-500 
+                        px-4 
+                        py-2 
+                        rounded-full 
+                        hover:bg-blue-600">
+                        Linkedin
+                    </Button>
+                </a>
+                <a target="_blank" href="https://github.com/wizardcoding">
+                    <Button className="
+                        border 
+                        cursor-pointer 
+                        border-gray-500 
+                        px-4 
+                        py-2 
+                        text-white 
+                        rounded-full">
+                        Github
+                    </Button>
+                </a>
             </section>
         </div>
     </header>
