@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { Separator } from "@/components/ui/separator"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { PlusCircleIcon } from "lucide-react";
 import {
     Card,
@@ -43,23 +43,21 @@ const SkillCard = (props: IskillCardProps) => {
                 <h3 className='text-slate-300 mb-2 text-2xl font-semibold'>Responsibilities:</h3>
                 <ScrollArea className="h-36 w-full rounded p-3">
                   {responsibilities.map(task => (
-                      <div key={Math.random()}>
-                          <p className='my-1' key={Math.random()}><span>{task}</span></p>
-                          <Separator />
+                      <div key={Math.random()} className='my-1 border-y border-slate-800 hover:border-blue-600'>
+                          <p className='my-1' key={Math.random()}><span className='ml-1'>{task}</span></p>
+                          {/* <Separator /> */}
                       </div>
                   ))}
-                  <ScrollBar orientation="horizontal" />
                 </ScrollArea>
             </CardContent>) : (<CardContent>
                 <h3 className='text-slate-300 mb-2 text-2xl font-semibold'>Technologies:</h3>
                 <ScrollArea className="h-36 w-full rounded p-3">
                   {techs.map(tech => (
-                      <div key={Math.random()}>
-                          <p className='my-1' key={Math.random()}><span>{tech}</span></p>
-                          <Separator />
+                      <div key={Math.random()} className='my-1 border-y border-slate-800 hover:border-slate-500'>
+                          <div className='my-1' key={Math.random()}><span className='ml-1'>{tech}</span></div>
+                          {/* <Separator /> */}
                       </div>
                   ))}
-                  <ScrollBar orientation="horizontal" />
                 </ScrollArea>
             </CardContent>)}
         </Card>
