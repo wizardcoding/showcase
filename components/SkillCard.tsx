@@ -19,13 +19,24 @@ import {
   }
 
 const SkillCard = (props: IskillCardProps) => {
-    const { project = '', description = '', responsibilities = [], techs = [] } = props;
+  const {
+    project = '',
+    description = '',
+    responsibilities = [],
+    techs = []
+  } = props;
+  
   const [viewMore, setViewMore] = useState(false);
 
   return (
     <Card className='max-w-[400px] mim-w-[300px] bg-slate-800 text-white mx-10'>
             <CardHeader>
-                <CardTitle className='mb-2 justify-between flex'>{`${project} `} <PlusCircleIcon onClick={() => setViewMore(!viewMore)} className={`cursor-pointer hover:text-blue-600 ${viewMore && 'text-blue-600'}`}/></CardTitle>
+                <CardTitle className='mb-2 justify-between flex'>
+                  {`${project} `}
+                  <PlusCircleIcon 
+                    onClick={() => setViewMore(!viewMore)} 
+                    className={`cursor-pointer hover:text-blue-600 ${viewMore && 'text-blue-600'}`}/>  
+                </CardTitle>
                 <CardDescription className='text-slate-300'>{description}</CardDescription>
             </CardHeader>
             {viewMore ? (<CardContent>
@@ -51,7 +62,6 @@ const SkillCard = (props: IskillCardProps) => {
                   <ScrollBar orientation="horizontal" />
                 </ScrollArea>
             </CardContent>)}
-            
         </Card>
   )
 }
