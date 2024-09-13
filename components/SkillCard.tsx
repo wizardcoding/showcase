@@ -28,7 +28,7 @@ const SkillCard = (props: IskillCardProps) => {
   const [viewMore, setViewMore] = useState(false);
 
   return (
-    <Card className=' mim-w-[400px] bg-slate-800 border-slate-600 text-white mx-2'>
+    <Card className=' mim-w-[400px] bg-slate-800 border-slate-600 text-white'>
             <CardHeader>
                 <CardTitle className='mb-2 justify-between flex text-slate-300'>
                   <span className='text-xl'>{project}</span>
