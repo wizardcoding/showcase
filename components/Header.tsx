@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Slash } from "lucide-react";
 import {
@@ -7,10 +8,12 @@ import {
     BreadcrumbList,
     BreadcrumbPage,
 } from "@/components/ui/breadcrumb"
+import { usePathname } from 'next/navigation'
   
 const Header = () => {
+    const pathName = usePathname();
   return (
-    <header className="py-2">
+    <header className="py-2 px-1 hidden sm:block">
         <div className="
             mx-10 
             sm:mx-auto 
@@ -23,7 +26,7 @@ const Header = () => {
             p-3 
             rounded-full"
         >
-            <section>
+            <section >
                 <span className="
                     text-xl 
                     text-white 
@@ -40,42 +43,49 @@ const Header = () => {
             <Breadcrumb>
                 <BreadcrumbList>
                     <BreadcrumbItem>
-                        <BreadcrumbPage className="text-white font-semibold">About</BreadcrumbPage>
+                        {pathName === '/' ? <BreadcrumbPage className="text-white font-semibold">About</BreadcrumbPage>
+                            : <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/">About</BreadcrumbLink>}
                     </BreadcrumbItem>
                     <Slash />
                     <BreadcrumbItem>
-                        <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/">Skills</BreadcrumbLink>
+                        {pathName === '/skills' ? <BreadcrumbPage className="text-white font-semibold">Skills</BreadcrumbPage>
+                            : <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/skills">Skills</BreadcrumbLink>}
                     </BreadcrumbItem>
                     <Slash />
                     <BreadcrumbItem>
-                        <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/">Contact</BreadcrumbLink>
+                        {pathName === '/contact' ? <BreadcrumbPage className="text-white font-semibold">Contact</BreadcrumbPage>
+                            : <BreadcrumbLink className="text-slate-400 hover:text-white cursor-pointer" href="/contact">Contact</BreadcrumbLink>}
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
             </section>
             <section className="flex space-x-3 items-center">
-                <Button className="
-                    cursor-pointer
-                    hidden 
-                    md:inline-block 
-                    text-white 
-                    bg-blue-500 
-                    px-4 
-                    py-2 
-                    rounded-full 
-                    hover:bg-blue-600">
-                    Linkedin
-                </Button>
-                <Button className="
-                    border 
-                    cursor-pointer 
-                    border-gray-500 
-                    px-4 
-                    py-2 
-                    text-white 
-                    rounded-full">
-                    Github
-                </Button>
+                <a target="_blank" href="https://www.linkedin.com/in/francisco-huizar-9a6420aa/">
+                    <Button className="
+                        cursor-pointer
+                        hidden 
+                        md:inline-block 
+                        text-white 
+                        bg-blue-500 
+                        px-4 
+                        py-2 
+                        rounded-full 
+                        hover:bg-blue-600">
+                        Linkedin
+                    </Button>
+                </a>
+                <a target="_blank" href="https://github.com/wizardcoding">
+                    <Button className="
+                        border 
+                        cursor-pointer 
+                        border-gray-500 
+                        px-4 
+                        py-2 
+                        text-white 
+                        rounded-full">
+                        Github
+                    </Button>
+                </a>
             </section>
         </div>
     </header>
