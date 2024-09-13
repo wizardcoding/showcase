@@ -6,7 +6,7 @@ import SkillCard from '@/components/SkillCard';
 const Skills = () => {
 
   return (
-    <div className="xl:w-full flex flex-col items-start md:w-10/12 mt-0 md:mt-20">
+    <div className="xl:w-full flex flex-col items-start md:w-10/12 mt-0 md:mt-10">
         <h1 className="
             mb-10
             text-3xl
