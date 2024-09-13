@@ -1,6 +1,5 @@
 "use client";
 import { useState } from 'react';
-import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { PlusCircleIcon } from "lucide-react";
 import {
@@ -29,33 +28,31 @@ const SkillCard = (props: IskillCardProps) => {
   const [viewMore, setViewMore] = useState(false);
 
   return (
-    <Card className='max-w-[400px] mim-w-[300px] bg-slate-800 text-white mx-10'>
+    <Card className=' mim-w-[400px] bg-slate-800 border-slate-600 text-white mx-2'>
             <CardHeader>
-                <CardTitle className='mb-2 justify-between flex'>
-                  {`${project} `}
+                <CardTitle className='mb-2 justify-between flex text-slate-300'>
+                  <span className='text-xl'>{project}</span>
                   <PlusCircleIcon 
                     onClick={() => setViewMore(!viewMore)} 
                     className={`cursor-pointer hover:text-blue-600 ${viewMore && 'text-blue-600'}`}/>  
                 </CardTitle>
-                <CardDescription className='text-slate-300'>{description}</CardDescription>
+                <CardDescription className='text-slate-400'>{description}</CardDescription>
             </CardHeader>
             {viewMore ? (<CardContent>
-                <h3 className='text-slate-300 mb-2 text-2xl font-semibold'>Responsibilities:</h3>
+                <h3 className='text-slate-300 mb-2 text-lg font-semibold'>Responsibilities:</h3>
                 <ScrollArea className="h-36 w-full rounded p-3">
                   {responsibilities.map(task => (
                       <div key={Math.random()} className='my-1 border-y border-slate-800 hover:border-blue-600'>
-                          <p className='my-1' key={Math.random()}><span className='ml-1'>{task}</span></p>
-                          {/* <Separator /> */}
+                          <div className='my-1 text-slate-400' key={Math.random()}><span className='ml-1'>{task}</span></div>
                       </div>
                   ))}
                 </ScrollArea>
             </CardContent>) : (<CardContent>
-                <h3 className='text-slate-300 mb-2 text-2xl font-semibold'>Technologies:</h3>
+                <h3 className='text-slate-300 mb-2 text-lg font-semibold'>Technologies:</h3>
                 <ScrollArea className="h-36 w-full rounded p-3">
                   {techs.map(tech => (
-                      <div key={Math.random()} className='my-1 border-y border-slate-800 hover:border-slate-500'>
-                          <div className='my-1' key={Math.random()}><span className='ml-1'>{tech}</span></div>
-                          {/* <Separator /> */}
+                      <div key={Math.random()} className='my-1 border-y border-slate-800 hover:border-slate-300'>
+                          <div className='my-1 text-slate-400' key={Math.random()}><span className='ml-1'>{tech}</span></div>
                       </div>
                   ))}
                 </ScrollArea>
