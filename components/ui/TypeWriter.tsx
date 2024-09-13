@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import { useTypewriter } from "react-simple-typewriter";
+
 type typeWriteProps = {
     words: string[];
 }
