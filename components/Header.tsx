@@ -13,7 +13,7 @@ import { usePathname } from 'next/navigation'
 const Header = () => {
     const pathName = usePathname();
   return (
-    <header className="py-2">
+    <header className="py-2 px-1 hidden sm:block">
         <div className="
             mx-10 
             sm:mx-auto 
@@ -26,7 +26,7 @@ const Header = () => {
             p-3 
             rounded-full"
         >
-            <section>
+            <section >
                 <span className="
                     text-xl 
                     text-white 

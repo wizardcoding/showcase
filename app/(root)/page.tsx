@@ -65,8 +65,7 @@ export default function Home() {
         <BreadCrumbActivities/>
         <h1 className="text-slate-400 text-sm md:text-3xl">Worked mostly with react but open to new Techs and fun tools</h1>
       </div>
-      {/* className="md:w-1/2 z-auto pt-2 md:mt-0" */}
-      <div className="container md:w-1/2 z-auto pt-2 md:mt-0 max-h-[45rem] overflow-y-hidden">
+      <div className="container sm:max-h-[32rem] md:w-1/2 z-auto pt-2 md:mt-0 lg:max-h-[39rem] xl:max-h-[45rem] md:max-h-[18rem] overflow-y-hidden">
         <div ref={container}></div>
       </div>
     </div>

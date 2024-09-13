@@ -1,51 +1,34 @@
 import skills from '@/constants/skills';
-import { Separator } from "@/components/ui/separator"
 import { Cursor } from "react-simple-typewriter";
 import TypeWriter from "@/components/ui/TypeWriter";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
-  
+import SkillCard from '@/components/SkillCard';
 
 const Skills = () => {
-    const cards = skills.map((data) => (
-        <Card key={Math.random()} className='max-w-[350px] bg-slate-800 text-white'>
-            <CardHeader>
-                <CardTitle>{data.skill}</CardTitle>
-                <CardDescription className='text-slate-300'>{data.description}</CardDescription>
-            </CardHeader>
-            <CardContent className='overflow-y-auto'>
-                <h3 className='text-slate-300 mb-2 text-2xl font-semibold'>Projects:</h3>
-                {data.projects.map(project => (
-                    <>
-                        <Separator />
-                        <p className='my-1' key={Math.random()}><span>{project}</span></p>
-                    </>
-                ))}
-            </CardContent>
-        </Card>
-    ));
 
   return (
-    <div className="w-full flex flex-col items-start md:w-2/4 mt-0 md:mt-20">
+    <div className="xl:w-full flex flex-col items-start md:w-10/12 mt-0 md:mt-20">
         <h1 className="
             mb-10
             text-3xl
             lg:text-5xl
             font-semibold">
           <span className="mr-3 text-slate-300">
-            <TypeWriter words={["Skills I Crafted","And projects I worked over the time."]}/>
+            <TypeWriter words={["Skills I Crafted", "projects I worked", "technologies I used before", "and currently."]}/>
             <Cursor
               cursorBlinking={true}
               cursorStyle={"/"}
               cursorColor="#2563EB"/>
           </span>
         </h1>
-        {cards}
+        <div className='flex 
+            items-start 
+            justify-between w-full'>
+          <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 lg:grid-rows-2 lg:grid-cols-2 sm:grid-rows-2 sm:grid-cols-2 gap-4">
+            { skills.map((data) => (
+              <SkillCard key={Math.random()} {...data}/>
+            ))}
+          </div>
+        </div>
     </div>
     
   )

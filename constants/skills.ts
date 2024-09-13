@@ -1,8 +1,66 @@
 export const skills = [
     {
-        skill: "React",
+        project: "React Component Library",
         description: "Develop, test, Desinng and maintain React components",
-        projects: ["Component library for build reusable react components", "SAAS bussines"],
+        techs: ["React", "Storybook", "Typescript", "React", "Storybook", "Typescript", "React", "Storybook", "Typescript"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
+    },
+    {
+        project: "SAAS bussines tools",
+        description: "Develop, test, Desinng and maintain React components",
+        techs: ["React", "Typescript", "SPA"],
+        responsibilities: ["Develop", "test", "update"],
+
     }
 ]
 
