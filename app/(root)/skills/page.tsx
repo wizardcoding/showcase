@@ -1,6 +1,7 @@
 import skills from '@/constants/skills';
 import { Separator } from "@/components/ui/separator"
-
+import { Cursor } from "react-simple-typewriter";
+import TypeWriter from "@/components/ui/TypeWriter";
 import {
     Card,
     CardContent,
@@ -30,9 +31,23 @@ const Skills = () => {
     ));
 
   return (
-    <>
+    <div className="w-full flex flex-col items-start md:w-2/4 mt-0 md:mt-20">
+        <h1 className="
+            mb-10
+            text-3xl
+            lg:text-5xl
+            font-semibold">
+          <span className="mr-3 text-slate-300">
+            <TypeWriter words={["Skills I Crafted","And projects I worked over the time."]}/>
+            <Cursor
+              cursorBlinking={true}
+              cursorStyle={"/"}
+              cursorColor="#2563EB"/>
+          </span>
+        </h1>
         {cards}
-    </>
+    </div>
+    
   )
 }
 

@@ -1,7 +1,8 @@
 "use client";
 import { useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Cursor } from "react-simple-typewriter";
+import TypeWriter from "@/components/ui/TypeWriter";
 import BreadCrumbActivities from "@/components/BreadCrumbActivities";
 import * as animationData from '@/public/projects.json';
 import lottie from "lottie-web";
@@ -18,15 +19,6 @@ export default function Home() {
       animationData: animationData
     })
   }, []);
-  const [text] = useTypewriter({
-    words: [
-      "Hi, my name is Francisco", 
-      "This is a showcase page.", 
-    ],
-    loop: 0,
-    delaySpeed: 4000,
-  });
-
 
   return (
     <div className="flex flex-col-reverse justify-between md:flex-row md:space-x-8">
@@ -36,7 +28,7 @@ export default function Home() {
             lg:text-5xl
             font-semibold">
           <span className="mr-3 text-slate-300">
-            {text}
+            <TypeWriter words={["Hi, my name is Francisco","This is a showcase page."]}/>
             <Cursor
               cursorBlinking={true}
               cursorStyle={"/"}
