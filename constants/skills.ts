@@ -51,14 +51,14 @@ export const skills = [
     {
         project: "SAAS bussines tools",
         description: "Develop, test, Desinng and maintain React components",
-        techs: ["React", "Typescript", "SPA"],
+        techs: ["React", "Typescript", "SPA", "Jest", "Python", "NextJS"],
         responsibilities: ["Develop", "test", "update"],
 
     },
     {
         project: "SAAS bussines tools",
         description: "Develop, test, Desinng and maintain React components",
-        techs: ["React", "Typescript", "SPA"],
+        techs: ["React", "Typescript", "SPA", "Ruby"],
         responsibilities: ["Develop", "test", "update"],
 
     }

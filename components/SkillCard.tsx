@@ -10,14 +10,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 
-  declare interface IskillCardProps {
-    project: string;
-    description: string;
-    responsibilities: string[];
-    techs: string[];
-  }
-
-const SkillCard = (props: IskillCardProps) => {
+const SkillCard = (props: IskillData) => {
   const {
     project = '',
     description = '',
