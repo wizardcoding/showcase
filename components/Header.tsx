@@ -29,7 +29,7 @@ const Header = () => {
             <section >
                 <span className="
                     text-xl 
-                    text-white 
+                    text-slate-200
                     cursor-pointer 
                     font-bold 
                     ml-2">
