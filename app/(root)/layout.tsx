@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import StoreProvider from '@/app/(root)/StoreProvider'
 
 export default function RootLayout({
   children,
@@ -10,7 +11,9 @@ export default function RootLayout({
       <Header />
       <section className="py-8">
         <div className="px-4 mx-auto">
-        {children}
+          <StoreProvider>
+            {children}
+          </StoreProvider>
         </div>
       </section>
     </main>

@@ -20,3 +20,7 @@ declare type skillCondensation = {
 declare type Icompetencies = {
     dataList: Array<skillCondensation>;
 }
+
+declare interface filters {
+    filter: string[];
+}
