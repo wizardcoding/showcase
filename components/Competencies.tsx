@@ -1,6 +1,7 @@
 "use client";
 import SkillInfo from './ui/SkillInfo';
 
+
 function Competencies(props: Icompetencies) {
   const { dataList } =props;
   

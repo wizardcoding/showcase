@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { PlusCircleIcon } from "lucide-react";
-import { useAppSelector } from '@/lib/hooks';
 import {
     Card,
     CardContent,
@@ -20,7 +19,7 @@ const SkillCard = (props: IskillData) => {
   } = props;
   
   const [viewMore, setViewMore] = useState(false);
-  const { filter } = useAppSelector(state=>state.filters)
+
 
   return (
     <Card className=' mim-w-[400px] bg-slate-800 border-slate-600 text-white'>
@@ -44,7 +43,6 @@ const SkillCard = (props: IskillData) => {
                 </ScrollArea>
             </CardContent>) : (<CardContent>
                 <h3 className='text-slate-300 mb-2 text-lg font-semibold'>Technologies:</h3>
-                {JSON.stringify(filter)}
                 <ScrollArea className="h-36 w-full rounded p-3">
                   {techs.map(tech => (
                       <div key={Math.random()} className='my-1 border-y border-slate-800 hover:border-slate-300'>

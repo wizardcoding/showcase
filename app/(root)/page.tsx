@@ -35,7 +35,7 @@ export default function Home() {
               cursorColor="#2563EB"/>
           </span>
         </h1>
-        <p className="text-white text-xl md:text-2xl mb-3 mt-8">
+        <p className="text-white text-xl md:text-2xl mb-6 mt-8">
           I&apos;m a frontend developer and backend from time to time.
         </p>
         <div>
@@ -62,8 +62,7 @@ export default function Home() {
             Contact
           </Button>
         </div>
-        <BreadCrumbActivities/>
-        <h1 className="text-slate-400 text-sm md:text-3xl">Worked mostly with react but open to new Techs and fun tools</h1>
+        <h1 className="text-slate-400 text-sm md:text-3xl mt-6">Worked mostly with react but open to new Techs and fun tools</h1>
       </div>
       <div className="container sm:max-h-[32rem] md:w-1/2 z-auto pt-2 md:mt-0 lg:max-h-[39rem] xl:max-h-[45rem] md:max-h-[18rem] overflow-y-hidden">
         <div ref={container}></div>

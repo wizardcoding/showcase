@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import filterSlice from '@/lib/features/filterSlice';
+import projectsSlice from '@/lib/features/projectsSlice';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      filters: filterSlice
+      filters: filterSlice,
+      projects: projectsSlice
     }
   })
 }
