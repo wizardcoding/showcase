@@ -1,7 +1,4 @@
-import skills from '@/constants/skills';
 import SkillInfo from './ui/SkillInfo';
-
-
 
 function Competencies(props: Icompetencies) {
   const { dataList} =props;

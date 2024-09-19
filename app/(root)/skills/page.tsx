@@ -3,12 +3,13 @@ import { Cursor } from "react-simple-typewriter";
 import TypeWriter from "@/components/ui/TypeWriter";
 import SkillCard from '@/components/SkillCard';
 import Competencies from '@/components/Competencies';
-import { countSkills } from '@/lib/utils'
+import { countSkills, countLanguages } from '@/lib/utils'
 
 
 
 const Skills = () => {
   const skillInfo: Array<skillCondensation> = countSkills(skills);
+  const languagesInfo: Array<skillCondensation> = countLanguages(skills);
   
   return (
     <div className="xl:w-full flex flex-col items-start md:w-10/12 mt-0 md:mt-10">
@@ -27,6 +28,7 @@ const Skills = () => {
           </span>
         </h1>
         <Competencies dataList={skillInfo} />
+        <Competencies dataList={languagesInfo} />
         <div className='flex 
             items-start 
             justify-between w-full'>

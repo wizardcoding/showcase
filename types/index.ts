@@ -5,6 +5,7 @@ declare interface IskillData {
     description: string;
     techs: string[];
     responsibilities: string[];
+    languages: string[];
 }
 
 declare type IskillListInfo = {
